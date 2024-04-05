@@ -6,7 +6,7 @@ const ProductProvider = ({children}) => {
     const [products, setProducts] = useState([]);
     useEffect(()=>{
         const fetchProducts = async () => {
-            const response = await fetch('https://dummyjson.com/products');
+            const response = await fetch('https://dummyjson.com/products?limit=0');
             const data = await response.json();
             setProducts(data.products);
         }
